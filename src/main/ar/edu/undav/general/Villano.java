@@ -8,15 +8,14 @@ public class Villano {
 		private List<String> hobbies;
 		
 		public Villano (String nombre, char sexo, List<String> seniasParticulares, List<String> hobbies) {
-			this.nombre=nombre;
-			this.sexo=sexo;
-			this.seniasParticulares.addAll(seniasParticulares);
-			this.hobbies.addAll(hobbies);
+			this.nombre= nombre;
+			this.sexo= sexo;
+			this.seniasParticulares= seniasParticulares;
+			this.hobbies= hobbies;
 			
 		}
 
-		public Object getNombre() {
-			// TODO Auto-generated method stub
+		public String getNombre() {
 			return nombre;
 		}
 
