@@ -5,31 +5,26 @@ import java.util.List;
 
 import ar.edu.undav.lugaresDeInteres.LugarInteres;
 
+
+/**
+ * @author crist
+ * La lista de String para las conexiones es para que el detective le pregunte al paisActual las conexiones,
+ * al devolverle el string con el nombre del pais. al elegi viajarA, busca ese String (nombre del pais) en el 
+ * mapamundi
+ */
 public class Pais {
 	
 	private String nombre;
 	private List<String> caractetisticas;
 	private List<LugarInteres> lugarInteres;
-	private List<Pais> conexiones;
+	private List<String> conexiones;
 	
-	/*
-	 * Cuando creas el primer pais es imposible ponerle conexiones porque no tenes
-	 * pais para agregar por ende, se dan dos constructores para poder crear el primero o lo
-	 * que sean necesarios y luego si un constructor que agregue una lista de conexiones
-	 */
 	//Constructor
-	public Pais(String nombre, List<String>caracteristicas) {
-		this.nombre=nombre;
-		this.caractetisticas= new ArrayList<String>();
-		this.caractetisticas.addAll(caracteristicas);
-	}
-	//Constructor
-	public Pais(String nombre, List<String>caracteristicas, List<Pais>conexiones) {
-		this.nombre=nombre;
-		this.caractetisticas= new ArrayList<String>();
-		this.caractetisticas.addAll(caracteristicas);
-		this.conexiones= new ArrayList<Pais>();
-		this.conexiones.addAll(conexiones);
+	public Pais(String nombre, List<String> caracteristicas, List<LugarInteres> lugaresInteres, List<String> conexiones) {
+		this.nombre= nombre;
+		this.caractetisticas= caracteristicas;
+		this.conexiones= conexiones;
+		this.lugarInteres= lugaresInteres;
 	}
 	
 	public String getNombre() {

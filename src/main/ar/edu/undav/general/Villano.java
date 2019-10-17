@@ -15,4 +15,9 @@ public class Villano {
 			
 		}
 
+		public Object getNombre() {
+			// TODO Auto-generated method stub
+			return nombre;
+		}
+
 }
