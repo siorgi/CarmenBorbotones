@@ -14,7 +14,7 @@ import ar.edu.undav.general.Villano;
 public class VillanoTest {
 	
 	@Test
-	public void creamosElVillanoSabriYObtenemosSuNombre() {
+	public void creamosElVillanoSabriYSuNombreEsSabri() {
 		//creamos las senias para el villano
 		List<String> senias= new ArrayList<String>();
 		senias.add("Pelo Negro");

@@ -12,7 +12,6 @@ public class Villano {
 			this.sexo= sexo;
 			this.seniasParticulares= seniasParticulares;
 			this.hobbies= hobbies;
-			
 		}
 
 		public String getNombre() {
