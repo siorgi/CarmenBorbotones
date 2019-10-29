@@ -12,7 +12,22 @@ public class Villano {
 			this.sexo=sexo;
 			this.seniasParticulares.addAll(seniasParticulares);
 			this.hobbies.addAll(hobbies);
-			
+		}
+		
+		public List<String> ObtenerHobbies(){
+			return this.hobbies;
+		}
+		
+		public List<String> ObtenerSeniasParticulares(){
+			return this.seniasParticulares;
+		}
+		
+		public String ObtenerNombre() {
+			return this.nombre;
+		}
+		
+		public char ObtenerSexo() {
+			return this.sexo;
 		}
 
 }
