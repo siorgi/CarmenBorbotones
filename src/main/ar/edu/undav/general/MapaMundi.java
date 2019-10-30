@@ -14,10 +14,10 @@ public class MapaMundi {
 		paises = new HashMap<String, Pais>();
 	}
 
-	public void ViajarA(Pais paisActual, String paisDestino) {
+	public void ViajarA(Pais paisActual, String paisDestino) throws PaisSinConexionException {
 		List<String> conexionesPaisActual = paisActual.getConexiones();
 		if(!conexionesPaisActual.contains(paisDestino)) {
-			throw new RuntimeException("No hay conexion entre paises");
+			throw new PaisSinConexionException("No hay conexion entre paises");
 		}
 	}
 

@@ -5,9 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Rule;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.rules.ExpectedException;
 
 import junit.framework.Assert;
 
@@ -120,7 +119,7 @@ class MapaMundiTest {
 	}
 
 
-	@Test(expected = RuntimeException.class) // VEr  ANDA MAL
+	@Test 
 	public void CrearMapaMundiNuevoYPreguntarSiEsQueSePuedeViajarAUnPaisQueTieneConexion() {
 		
 		MapaMundi mapa = new MapaMundi();
@@ -168,7 +167,7 @@ class MapaMundiTest {
 		mapa.AgregarPais(uruguay);
 		mapa.AgregarPais(argentina);
 		
-		mapa.ViajarA(argentina, "polonia");
 		
+		Assertions.assertThrows(PaisSinConexionException.class, () -> { mapa.ViajarA(argentina, "polonia"); });
 	}
 }
